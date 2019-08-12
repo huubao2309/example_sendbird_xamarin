@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using FormsChat.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -25,16 +25,16 @@ namespace FormsChat.Views
             }
         }
 
-        //public ChatPage(FormsChat.Model.User user, GroupChannel channel)
-        //{
-        //    InitializeComponent();
-        //    BindingContext = vm = new ChatViewModel();
-        //    vm.Channel = channel;
-        //    vm.Title = user.Nickname;
-        //    vm.UserName = Settings.UserId;
-        //    vm.Load();
-        //    instance = this;
-        //}
+        public ChatPage(FormsChat.Model.User user, GroupChannel channel)
+        {
+            InitializeComponent();
+            BindingContext = vm = new ChatViewModel();
+            vm.Channel = channel;
+            vm.Title = user.Nickname;
+            vm.UserName = Settings.UserId;
+            vm.Load();
+            instance = this;
+        }
 
         public void ScrollDown(UserMessage m)
         {

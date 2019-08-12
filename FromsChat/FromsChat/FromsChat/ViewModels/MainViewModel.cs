@@ -1,12 +1,8 @@
 ﻿//using FormsChat.Helpers;
 using FormsChat.Views;
 using SendBird;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
+using FormsChat.Helpers;
 using Xamarin.Forms;
 
 namespace FormsChat.ViewModels
@@ -19,16 +15,16 @@ namespace FormsChat.ViewModels
 
         public string Email
         {
-            get { return email; }
-            set { SetProperty(ref email, value); }
+            get => email;
+            set => SetProperty(ref email, value);
         }
 
         private string nickname;
 
         public string Nickname
         {
-            get { return nickname; }
-            set { SetProperty(ref nickname, value); }
+            get => nickname;
+            set => SetProperty(ref nickname, value);
         }
 
 
@@ -63,7 +59,7 @@ namespace FormsChat.ViewModels
             });
             MessageError = "Connected";
             //Settings.IsLogin = true;
-            //Settings.UserId = Email;
+            Settings.UserId = Email;
             await Navigation.PushAsync(new UserListPage());
 
         }

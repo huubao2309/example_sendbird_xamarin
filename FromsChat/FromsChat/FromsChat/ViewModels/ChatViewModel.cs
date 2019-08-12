@@ -14,44 +14,44 @@ namespace FormsChat.ViewModels
     public class ChatViewModel : ViewModelBase
     {
         #region Properties
-        //private FormsChat.Model.User userTo;
+        private FormsChat.Model.User userTo;
 
-        //public FormsChat.Model.User UserTo
-        //{
-        //    get { return userTo; }
-        //    set { SetProperty(ref userTo, value); }
-        //}
+        public FormsChat.Model.User UserTo
+        {
+            get => userTo;
+            set => SetProperty(ref userTo, value);
+        }
 
 
         private ObservableCollection<UserMessage> _messages;
 
         public ObservableCollection<UserMessage> Messages
         {
-            get { return _messages; }
-            set { SetProperty(ref _messages, value); }
+            get => _messages;
+            set => SetProperty(ref _messages, value);
         }
 
         private string txtmessage;
         public string TxtMessage
         {
-            get { return txtmessage; }
-            set { SetProperty(ref txtmessage, value); }
+            get => txtmessage;
+            set => SetProperty(ref txtmessage, value);
         }
 
         private GroupChannel channel;
 
         public GroupChannel Channel
         {
-            get { return channel; }
-            set { SetProperty(ref channel, value); }
+            get => channel;
+            set => SetProperty(ref channel, value);
         }
 
         private string username;
 
         public string UserName
         {
-            get { return username; }
-            set { SetProperty(ref username, value); }
+            get => username;
+            set => SetProperty(ref username, value);
         }
 
 
