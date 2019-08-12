@@ -1,4 +1,3 @@
-// Helpers/Settings.cs
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
 
@@ -35,38 +34,22 @@ namespace FormsChat.Helpers
 
         public static string GeneralSettings
 		{
-			get
-			{
-				return AppSettings.GetValueOrDefault(SettingsKey, SettingsDefault);
-			}
-			set
-			{
-				AppSettings.AddOrUpdateValue(SettingsKey, value);
-			}
-		}
+			get => AppSettings.GetValueOrDefault(SettingsKey, SettingsDefault);
+            set => AppSettings.AddOrUpdateValue(SettingsKey, value);
+        }
 
 
 
         public static string UserId
         {
-            get {
-                return AppSettings.GetValueOrDefault(UserKey, UserDefault);
-            }
-            set {
-                AppSettings.AddOrUpdateValue(UserKey, value);
-            }
+            get => AppSettings.GetValueOrDefault(UserKey, UserDefault);
+            set => AppSettings.AddOrUpdateValue(UserKey, value);
         }
 
         public static bool IsLogin
         {
-            get
-            {
-                return AppSettings.GetValueOrDefault(IsLoginKey, IsLoginDefault);
-            }
-            set
-            {
-                AppSettings.AddOrUpdateValue(IsLoginKey, value);
-            }
+            get => AppSettings.GetValueOrDefault(IsLoginKey, IsLoginDefault);
+            set => AppSettings.AddOrUpdateValue(IsLoginKey, value);
         }
 
 

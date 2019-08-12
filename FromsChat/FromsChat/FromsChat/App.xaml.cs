@@ -1,4 +1,6 @@
 ﻿using FormsChat.Views;
+using FromsChat.Resources;
+using SendBird;
 using Xamarin.Forms;
 
 namespace FromsChat
@@ -8,7 +10,7 @@ namespace FromsChat
         public App()
         {
             InitializeComponent();
-            //SendBirdClient.Init(Resource.APP_ID);
+            SendBirdClient.Init(Resource.APP_ID);
             MainPage = new NavigationPage(new MainPage());
         }
 

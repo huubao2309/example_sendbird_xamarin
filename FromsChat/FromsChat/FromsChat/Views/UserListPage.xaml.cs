@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using FormsChat.Helpers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -27,12 +27,12 @@ namespace FormsChat.Views
 
         private void lstView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            //var user = (FormsChat.Model.User)e.SelectedItem;
-            //List<string> users = new List<string>() {
-            //    Settings.UserId,
-            //    user.Email
-            //};
-            //vm.ConnectToChannel(user, users);
+            var user = (FormsChat.Model.User)e.SelectedItem;
+            List<string> users = new List<string>() {
+                Settings.UserId,
+                user.Email
+            };
+            vm.ConnectToChannel(user, users);
         }
     }
 }

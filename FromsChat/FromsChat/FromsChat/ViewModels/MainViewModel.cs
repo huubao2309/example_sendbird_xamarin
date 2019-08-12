@@ -1,8 +1,7 @@
-﻿//using FormsChat.Helpers;
+﻿using FormsChat.Helpers;
 using FormsChat.Views;
 using SendBird;
 using System.Windows.Input;
-using FormsChat.Helpers;
 using Xamarin.Forms;
 
 namespace FormsChat.ViewModels
@@ -58,7 +57,7 @@ namespace FormsChat.ViewModels
                 });
             });
             MessageError = "Connected";
-            //Settings.IsLogin = true;
+            Settings.IsLogin = true;
             Settings.UserId = Email;
             await Navigation.PushAsync(new UserListPage());
 
