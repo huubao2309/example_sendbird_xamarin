@@ -8,9 +8,9 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <!--<converters:TypeToBackgroundConverter x:Key="TypeToBackgroundConverter" />-->
-            <!--<converters:TypeToColumnConverter x:Key="TypeToColumnConverter" />
-            <converters:TypeToTextColorConverter x:Key="TypeToTextColorConverter" />-->
+            <converters:TypeToBackgroundConverter x:Key="TypeToBackgroundConverter" />
+            <converters:TypeToColumnConverter x:Key="TypeToColumnConverter" />
+            <converters:TypeToTextColorConverter x:Key="TypeToTextColorConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
