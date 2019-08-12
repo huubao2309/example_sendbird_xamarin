@@ -107,7 +107,8 @@ namespace FormsChat.ViewModels
             {
                 if (string.IsNullOrEmpty(TxtMessage))
                 {
-                    IsBusy = false; return;
+                    IsBusy = false;
+                    return;
                 }
                 Channel.SendUserMessage(TxtMessage, "", (UserMessage userMessage, SendBirdException e) =>
                 {

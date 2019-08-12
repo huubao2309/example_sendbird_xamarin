@@ -37,8 +37,8 @@ namespace FormsChat.ViewModels
             CommandConnect = new Command(Connect);
         }
 
-        async void Connect() {
-            
+        async void Connect()
+        {
             SendBirdClient.Connect(Email, (User user, SendBirdException e) =>
             {
                 if (e != null)
