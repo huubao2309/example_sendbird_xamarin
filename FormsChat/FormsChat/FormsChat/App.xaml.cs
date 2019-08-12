@@ -1,6 +1,7 @@
-﻿using System;
+﻿using FormsChat.Resources;
+using FormsChat.Views;
+using SendBird;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace FormsChat
 {
@@ -9,8 +10,8 @@ namespace FormsChat
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            SendBirdClient.Init(Resource.APP_ID);
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
